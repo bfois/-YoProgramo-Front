@@ -1,0 +1,22 @@
+#logo{
+    margin: 2px;
+}
+#boton{
+    margin: 2px;
+    color:white;
+}
+#boton:hover{
+    background-color:rgb(83, 83, 241);
+}
+#social{
+    text-align: end;
+}
+.social{
+    margin-right: 2px;
+    
+}
+.social:hover{
+    cursor: pointer;
+    height: 31px;
+}
+
