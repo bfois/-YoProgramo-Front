@@ -1,0 +1,14 @@
+#bienvenida-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px;
+    z-index: 2;
+}
+p{
+  font-family:'Courier New', Courier, monospace;
+  color:white;
+  background-color: rgba(7, 5, 5, 0.212);
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+}

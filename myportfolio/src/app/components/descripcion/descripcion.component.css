@@ -1,0 +1,22 @@
+*{
+    color:white;
+}
+.container{
+    text-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.perfil{
+    border-radius: 50%;
+}
+#descripcion{
+    margin-left: 5px;
+}
+p{
+    margin-bottom: -5px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+

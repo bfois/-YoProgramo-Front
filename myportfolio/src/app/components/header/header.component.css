@@ -17,6 +17,14 @@
 }
 .social:hover{
     cursor: pointer;
-    height: 31px;
+}
+#navbar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background: #20202380;
+    z-index: 2;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px)
 }
 

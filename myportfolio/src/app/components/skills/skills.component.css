@@ -1,0 +1,12 @@
+*{
+    color:white;
+}
+.container{
+   width: 50%
+}
+h4{
+    margin-top: 25px;
+    margin-bottom: -20px;
+    text-decoration: underline 4px rgb(82, 82, 82);
+    text-underline-offset: 6px;
+}
