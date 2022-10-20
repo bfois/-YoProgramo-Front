@@ -13,6 +13,10 @@ import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { FormacionComponent } from './components/formacion/formacion.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 
 
@@ -31,6 +35,10 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     AboutmeComponent,
     FormacionComponent,
     SkillsComponent,
+    ExperienciaComponent,
+    ProyectosComponent,
+    FooterComponent,
+  
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [

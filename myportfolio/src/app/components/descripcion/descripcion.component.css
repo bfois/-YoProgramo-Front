@@ -8,15 +8,20 @@
     align-items: center;
 }
 .perfil{
+    z-index: 2;
     border-radius: 50%;
 }
 #descripcion{
-    margin-left: 5px;
+    margin-left: 1%;
 }
 p{
+   
     margin-bottom: -5px;
     font-size: 30px;
     font-weight: bold;
+}
+h5{
+    font-size: 15px;
 }
 
 

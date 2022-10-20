@@ -10,3 +10,6 @@ h4{
     text-decoration: underline 4px rgb(82, 82, 82);
     text-underline-offset: 6px;
 }
+p{
+    margin-top: 2%;
+}
