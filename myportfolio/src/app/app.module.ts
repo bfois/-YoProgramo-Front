@@ -17,7 +17,7 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
-
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -45,7 +45,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
