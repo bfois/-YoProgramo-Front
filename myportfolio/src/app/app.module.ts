@@ -16,8 +16,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { InterceptorService } from './service/interceptor.service';
 
 
 
@@ -48,7 +49,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS,useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
