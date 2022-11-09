@@ -47,7 +47,8 @@ import { InterceptorService } from './service/interceptor.service';
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS,useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]
