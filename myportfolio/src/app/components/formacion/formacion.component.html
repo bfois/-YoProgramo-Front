@@ -1,6 +1,8 @@
 <div class="container">
     <h4>Formación:</h4>
     <br>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi nemo porro et deleniti explicabo sequi quas quasi ullam, dicta obcaecati ipsum incidunt vitae quaerat tempora rerum veritatis! Maiores, numquam atque.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis repellat sed corporis animi. Unde molestiae officia impedit, commodi ab est optio adipisci eos magni vero incidunt necessitatibus aspernatur eum qui!</p>
+        <tr *ngFor="let Educacion of edu" >
+            <td>{{Educacion.nombreEdu}}</td>
+            <td>{{Educacion.descripcionEdu}}</td>
+        </tr>
 </div>

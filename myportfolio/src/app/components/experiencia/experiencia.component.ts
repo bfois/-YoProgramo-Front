@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/service/auth.service';
+import { Experiencia } from 'src/app/model/experiencia';
+
 import { SexperienciaService } from 'src/app/service/sexperiencia.service';
+
 
 
 @Component({
@@ -9,10 +11,11 @@ import { SexperienciaService } from 'src/app/service/sexperiencia.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  experiencia: ExperienciaComponent[] = [];
-  constructor(private sExperiencia:SexperienciaService,private tokenService:AuthService) { }
+  expe : Experiencia[] = [];
+  constructor(public sExperiencia: SexperienciaService) { }
 
   ngOnInit(): void {
+    this.sExperiencia.lista().subscribe(data =>{this.expe = data;})
   }
 
 }

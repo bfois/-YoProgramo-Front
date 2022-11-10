@@ -24,6 +24,7 @@ import { InterceptorService } from './service/interceptor.service';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { InterceptorService } from './service/interceptor.service';
     ExperienciaComponent,
     ProyectosComponent,
     FooterComponent,
+    
   
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
