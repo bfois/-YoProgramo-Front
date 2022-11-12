@@ -23,7 +23,7 @@ export class SexperienciaService {
   }
 
   public update(id:number, experiencia:Experiencia): Observable<any>{
-    return this.httpClient.put<any>(this.expUrl + `ùpdate/${id}`,experiencia);
+    return this.httpClient.put<any>(this.expUrl + `update/${id}`,experiencia);
   }
 
   public delete(id:number):Observable<any>{
