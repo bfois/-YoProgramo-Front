@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HyS } from 'src/app/model/hy-s';
+import { HysService } from 'src/app/service/hys.service';
 
 @Component({
   selector: 'app-skills',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
+  hys: HyS[] = []
 
-  constructor() { }
+  constructor(public sHys: HysService) { }
 
   ngOnInit(): void {
+    this.sHys.lista().subscribe(data =>{this.hys = data;})
+ 
   }
 
 }
