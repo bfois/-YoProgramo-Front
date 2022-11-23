@@ -19,6 +19,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { InterceptorService } from './service/interceptor.service';
+import { NewExpComponent } from './components/experiencia/new-exp.component';
+import { EditexpComponent } from './components/experiencia/editexp.component';
+
 
 
 
@@ -40,7 +43,9 @@ import { InterceptorService } from './service/interceptor.service';
     ExperienciaComponent,
     ProyectosComponent,
     FooterComponent,
-    
+    NewExpComponent,
+    EditexpComponent,
+
   
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],

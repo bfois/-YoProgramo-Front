@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Experiencia } from 'src/app/model/experiencia';
 
 import { SexperienciaService } from 'src/app/service/sexperiencia.service';
+import { TokenService } from 'src/app/service/token.service';
 
 
 
@@ -12,10 +13,26 @@ import { SexperienciaService } from 'src/app/service/sexperiencia.service';
 })
 export class ExperienciaComponent implements OnInit {
   expe : Experiencia[] = [];
-  constructor(public sExperiencia: SexperienciaService) { }
+  constructor(public sExperiencia: SexperienciaService, private tokenService : TokenService) { }
+  isLogged = false;
 
   ngOnInit(): void {
-    this.sExperiencia.lista().subscribe(data =>{this.expe = data;})
+    this.cargarExperiencia()
+   if(this.tokenService.getToken()){
+    this.isLogged = true;
+   }
+   else{
+    this.isLogged = false;
+   }
   }
-
+cargarExperiencia():void{
+this.sExperiencia.lista().subscribe(data =>{this.expe = data})
+}
+delete(id?:number){
+  if(id !=undefined){
+    this.sExperiencia.delete(id).subscribe(data =>{
+      this.cargarExperiencia();
+    },err=>{alert("No se pudo eliminar la experiencia");})
+  }
+}
 }
