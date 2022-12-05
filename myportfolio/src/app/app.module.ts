@@ -21,6 +21,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { InterceptorService } from './service/interceptor.service';
 import { NewExpComponent } from './components/experiencia/new-exp.component';
 import { EditexpComponent } from './components/experiencia/editexp.component';
+import { EditComponent } from './components/formacion/edit.component';
+import { NewComponent } from './components/formacion/new.component';
+import { EditSkillComponent } from './components/skills/edit-skill.component';
+import { NewSkillComponent } from './components/skills/new-skill.component';
+
 
 
 
@@ -45,6 +50,11 @@ import { EditexpComponent } from './components/experiencia/editexp.component';
     FooterComponent,
     NewExpComponent,
     EditexpComponent,
+    EditComponent,
+    NewComponent,
+    EditSkillComponent,
+    NewSkillComponent,
+
 
   
   ],
