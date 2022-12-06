@@ -13,7 +13,7 @@ URL = 'http://localhost:8080/personas/';
   constructor(private http:HttpClient) { }
 
   public getPersona():Observable<Persona>{
-    return this.http.get<Persona>(this.URL+'/lista');
+    return this.http.get<Persona>(this.URL+'lista');
   }
   public detail(id: number): Observable<Persona>{
     return this.http.get<Persona>(this.URL + `detail/${id}`);

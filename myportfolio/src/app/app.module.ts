@@ -23,8 +23,13 @@ import { NewExpComponent } from './components/experiencia/new-exp.component';
 import { EditexpComponent } from './components/experiencia/editexp.component';
 import { EditComponent } from './components/formacion/edit.component';
 import { NewComponent } from './components/formacion/new.component';
-import { EditSkillComponent } from './components/skills/edit-skill.component';
-import { NewSkillComponent } from './components/skills/new-skill.component';
+import { EditDescComponent } from './components/descripcion/edit-desc.component';
+import { EditAboutComponent } from './components/aboutme/edit-about.component';
+import { EditProyecComponent } from './components/proyectos/edit-proyec.component';
+import { NewProyecComponent } from './components/proyectos/new-proyec.component';
+import { EditHysComponent } from './components/skills/edit-hys.component';
+import { NewHysComponent } from './components/skills/new-hys.component';
+
 
 
 
@@ -52,8 +57,12 @@ import { NewSkillComponent } from './components/skills/new-skill.component';
     EditexpComponent,
     EditComponent,
     NewComponent,
-    EditSkillComponent,
-    NewSkillComponent,
+    EditDescComponent,
+    EditAboutComponent,
+    EditProyecComponent,
+    NewProyecComponent,
+    EditHysComponent,
+    NewHysComponent,
 
 
   
@@ -65,7 +74,7 @@ import { NewSkillComponent } from './components/skills/new-skill.component';
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [{provide: HTTP_INTERCEPTORS,useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]

@@ -1,7 +1,14 @@
 <section>
-<div class="container">
-    <img class="perfil" src="{{persona.img}}" height="100px">
-   <div id="descripcion"> <h5> <p>{{persona.nombre}} {{persona.apellido}}<br></p> {{persona.descripcion}}</h5></div> 
+<div class="container" >
    
+    
+    <img class="perfil" src="{{persona.img}}" height="100px">
+   <div id="descripcion"> <h5> <p>{{persona.nombre}} {{persona.apellido}}<br></p> {{persona.descripcion}}</h5></div>
+   <div *ngIf="isLogged">
+    <button class="btn btn-dark" routerLink="/edit/{{persona.id}}">
+        <i class="bi bi-pen"></i>Editar
+    </button>
+   </div>
 </div>
+
 </section>

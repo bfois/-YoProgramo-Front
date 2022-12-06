@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Proyectos } from 'src/app/model/proyectos';
 import { ProyectosService } from 'src/app/service/proyectos.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -9,10 +10,27 @@ import { ProyectosService } from 'src/app/service/proyectos.service';
 })
 export class ProyectosComponent implements OnInit {
   proyec : Proyectos[] = [];
-  constructor(public sProyectos: ProyectosService) { }
+  constructor(public sProyectos: ProyectosService, private tokenService:TokenService) { }
+  isLogged = false;
 
   ngOnInit(): void {
-    this.sProyectos.lista().subscribe(data =>{this.proyec = data;})
+    this.cargarProyec()
+   if(this.tokenService.getToken()){
+    this.isLogged = true;
+   }
+   else{
+    this.isLogged = false;
+   }
   }
- 
+  cargarProyec():void{
+    this.sProyectos.lista().subscribe(data =>{this.proyec = data;})
+}
+delete(id?:number){
+  if(id !=undefined){
+    this.sProyectos.delete(id).subscribe(data =>{
+      this.cargarProyec();
+    },err=>{alert("No se pudo eliminar la experiencia");})
+  }
+}
+  
 }

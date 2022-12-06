@@ -15,18 +15,18 @@ export class ProyectosService {
   }
 
   public detail(id: number): Observable<Proyectos>{
-    return this.httpClient.get<Proyectos>(this.urlProyec + `detail/${id}`);
+    return this.httpClient.get<Proyectos>(this.urlProyec + `/detail/${id}`);
   }
 
   public save(proyectos: Proyectos):Observable<any>{
-    return this.httpClient.post<any>(this.urlProyec + 'create',proyectos);
+    return this.httpClient.post<any>(this.urlProyec + '/create',proyectos);
   }
 
   public update(id:number, proyectos:Proyectos): Observable<any>{
-    return this.httpClient.put<any>(this.urlProyec + `update/${id}`,proyectos);
+    return this.httpClient.put<any>(this.urlProyec + `/update/${id}`,proyectos);
   }
 
   public delete(id:number):Observable<any>{
-    return this.httpClient.delete<any>(this.urlProyec + `delete/${id}`)
+    return this.httpClient.delete<any>(this.urlProyec + `/delete/${id}`)
   }
 }

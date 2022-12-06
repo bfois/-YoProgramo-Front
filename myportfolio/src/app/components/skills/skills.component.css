@@ -20,3 +20,7 @@ h5{
     margin-top: 10%;
     display: flex;
 }
+
+circle-progress:hover{
+    cursor:grab;
+}

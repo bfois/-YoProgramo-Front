@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HyS } from 'src/app/model/hy-s';
-import { HysService } from 'src/app/service/hys.service';
+import { SkillService } from 'src/app/service/skill.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-skills',
@@ -9,12 +10,28 @@ import { HysService } from 'src/app/service/hys.service';
 })
 export class SkillsComponent implements OnInit {
   hys: HyS[] = []
-
-  constructor(public sHys: HysService) { }
+  constructor(public sHys: SkillService, private tokenService : TokenService) { }
+  isLogged = false;
 
   ngOnInit(): void {
-    this.sHys.lista().subscribe(data =>{this.hys = data;})
- 
+    this.cargarSkill()
+   if(this.tokenService.getToken()){
+    this.isLogged = true;
+   }
+   else{
+    this.isLogged = false;
+   }
   }
+  cargarSkill():void{
+this.sHys.lista().subscribe(data =>{this.hys = data})
+}
+delete(id?:number){
+  if(id !=undefined){
+    this.sHys.delete(id).subscribe(data =>{
+      this.cargarSkill();
+    },err=>{alert("No se pudo eliminar la experiencia");})
+  }
+}
 
 }
+
