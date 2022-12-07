@@ -1,15 +1,29 @@
-*{
-    color:white;
-}
 .container{
-   width: 50%
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 50%;
+    color: white;
+    box-sizing: border-box;
 }
-h4{
-    margin-top: 25px;
-    margin-bottom: -20px;
-    text-decoration: underline 4px rgb(82, 82, 82);
-    text-underline-offset: 6px;
-}
+
 p{
-    margin-top: 2%;
+    font-size: 12px;
 }
+
+.col{
+    text-align: center;
+}
+h5{
+    
+    font-size: 14px;
+}
+.button{
+    display: flex;
+    width: 0px;
+}
+button{
+    margin: 3px;
+}
+
+

@@ -1,14 +1,15 @@
-<div class="container50" *ngIf="about">
-   
-    <div>
+<div class="about" *ngIf="about">
+   <div class="logo-about"><img src="../../../assets/logo.png" alt="logo" width="100px"></div>
+    <div class="about-form">
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div class="form-group">
-                <label for="descripcion">About me:</label>
+                <label for="descripcion">Sobre mi:</label>
                 <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="about.descripcion" required>
             </div>
-            <button class="btn btn-primary" >
-               Actualizar Datos
-            </button>
+            <div class="about-send"><button class="btn btn-primary" >
+                Actualizar Datos
+             </button></div>
+            
         </form>
     </div>
 

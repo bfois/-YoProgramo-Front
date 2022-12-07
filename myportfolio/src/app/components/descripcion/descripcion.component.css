@@ -1,27 +1,21 @@
-*{
-    color:white;
-}
 .container{
-    text-align: start;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
+    color: white;
+    box-sizing: border-box;
+    
 }
 .perfil{
-    z-index: 2;
     border-radius: 50%;
+    margin: 3%;
 }
-#descripcion{
-    margin-left: 1%;
-}
-p{
-   
-    margin-bottom: -5px;
-    font-size: 30px;
+p{  
     font-weight: bold;
+    font-size: 30px;
+    margin-bottom: -1%;
 }
 h5{
-    font-size: 15px;
+    font-size: 12px;
 }
-
-

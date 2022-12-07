@@ -1,26 +1,26 @@
 <div class="container">
+    <div class="container-fluid">
     <h3>Proyectos:</h3>
 
-    <div>
         <button type="button" class="btn btn-dark" routerLink="/newProyec" *ngIf="isLogged">Nuevo Proyecto</button>
+        <div class="row">
+            <div class="col proyects" *ngFor="let Proyectos of proyec">
+                <h5>{{Proyectos.nombre}}</h5>
+            <div>
+                <img src="{{Proyectos.img}}" alt="proyectos" width="200px">
+            </div>
+             
+             <div><p>{{Proyectos.descripcion}}</p></div>
+            <div class="proyec-bottom">
+             <div *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editProyec/{{Proyectos.id}}">
+                <i class="bi bi-pen"></i>
+            </button></div>
+             <div *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Proyectos.id)">
+                <i class="bi bi-trash3-fill"></i>
+            </button></div>
+        </div>
+        </div>
+        
     </div>
-
-    <div class="proyects">
-     
-        <tr *ngFor="let Proyectos of proyec">
-         <td>{{Proyectos.nombre}}</td>
-         <img src="{{Proyectos.img}}" alt="proyectos" width="200px">
-         <td>{{Proyectos.descripcion}}</td>
-         <td *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editProyec/{{Proyectos.id}}">
-            <i class="bi bi-pen"></i>Editar
-        </button>
-    </td>
-        <td *ngIf="isLogged">
-            <button class="btn btn-danger" (click)="delete(Proyectos.id)">
-                <i class="bi bi-trash3-fill"></i>Borrar
-            </button>
-            </td>
-        </tr>
-    </div>
-   
+</div>
 </div>

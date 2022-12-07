@@ -1,15 +1,11 @@
-*{
-    color:white;
-}
 .container{
-   width: 50%
-}
-h4{
-    margin-top: 25px;
-    margin-bottom: -20px;
-    text-decoration: underline 4px rgb(82, 82, 82);
-    text-underline-offset: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    color: white;
+    box-sizing: border-box;
 }
 p{
-    margin-top: 2%;
+    font-size: 12px;
 }

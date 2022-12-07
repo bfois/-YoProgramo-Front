@@ -29,5 +29,6 @@
 }
 .redesSociales{
     display: flex;
-    
+    margin-right: 5px;
+    margin-top: 3px;
 }

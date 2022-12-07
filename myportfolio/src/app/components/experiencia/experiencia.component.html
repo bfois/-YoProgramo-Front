@@ -1,21 +1,27 @@
 <div class="container">
+    <div class="container-fluid">
     <h4>Experiencia:</h4>
-    <br>
-    <div>
         <button type="button" class="btn btn-dark" routerLink="/newexp" *ngIf="isLogged">Nueva Experiencia</button>
-    </div>
-    <br>
-    <tr *ngFor="let Experiencia of expe">
-        <td>{{Experiencia.nombreE}}</td>
-        <td>{{Experiencia.descripcionE}}</td>
-        <td *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editexp/{{Experiencia.id}}">
-            <i class="bi bi-pen"></i>Editar
-        </button>
-    </td>
-        <td *ngIf="isLogged">
-            <button class="btn btn-danger" (click)="delete(Experiencia.id)">
-                <i class="bi bi-trash3-fill"></i>Borrar
-            </button>
-            </td>
-    </tr>
+
+        <div class="row" *ngFor="let Experiencia of expe">
+            <div class="col">
+                <h5>{{Experiencia.nombreE}}</h5>
+            </div>
+            <div class="col">
+                <p>{{Experiencia.descripcionE}}</p>
+            </div>
+            <div class="exp-button">
+                <div *ngIf="isLogged"><button class="btn btn-dark" routerLink="/editexp/{{Experiencia.id}}">
+                    <i class="bi bi-pen"></i>
+                </button></div>
+                <div *ngIf="isLogged">
+                    <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                        <i class="bi bi-trash3-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+   
+     
+</div>
 </div>
