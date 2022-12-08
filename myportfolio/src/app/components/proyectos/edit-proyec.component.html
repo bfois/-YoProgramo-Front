@@ -1,5 +1,5 @@
-<div class="container50" *ngIf="proyec">
-   
+<div class="container" *ngIf="proyec">
+    <div class="logo-desc"><img src="../../../assets/logo.png" alt="logo" width="100px" routerLink=""></div>
     <div>
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div class="form-group">
@@ -14,9 +14,13 @@
                 <label for="img">Imagen:</label>
                 <input type="text" class="form-control" id="img" name="img" [(ngModel)]="proyec.img" required>
             </div>
-            <button class="btn btn-primary" >
-               Actualizar Proyecto
-            </button>
+            <div class="form-group">
+                <label for="url">Link:</label>
+                <input type="text" class="form-control" id="url" name="url" [(ngModel)]="proyec.url" required>
+            </div>
+            <div class="actualizar"><button class="btn btn-primary" >
+                Actualizar Proyecto
+             </button></div>
         </form>
     </div>
 

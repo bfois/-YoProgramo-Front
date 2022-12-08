@@ -1,5 +1,5 @@
 <div class="container info" *ngIf="info">
-   
+   <div class="logo-desc"><img src="../../../assets/logo.png" width="100px" routerLink=""></div>
     <div>
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div class="form-group">
@@ -10,9 +10,10 @@
                 <label for="descripcion">Descripcion:</label>
                 <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="info.descripcion" required>
             </div>
+            <div class="actualizar">
             <button class="btn btn-primary" >
                Actualizar Datos
-            </button>
+            </button></div>
         </form>
     </div>
 

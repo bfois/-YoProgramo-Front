@@ -1,5 +1,5 @@
-<div class="container50">
-   
+<div class="container">
+    <div class="logo-desc"><img src="../../../assets/logo.png" alt="logo" width="100px" routerLink=""></div>
     <div>
         <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
             <div class="form-group">
@@ -10,9 +10,9 @@
                 <label for="porcentajeHyS">Porcentaje:</label>
                 <input type="number" class="form-control" id="porcentajeHyS" name="porcentajeHyS" [(ngModel)]="porcentajeHyS" required>
             </div>
-            <button class="btn btn-primary" >
-                Agregar Skill
-            </button>
+            <div class="actualizar"><button class="btn btn-primary" >
+                Agregar Habilidad
+             </button></div>
         </form>
     </div>
 

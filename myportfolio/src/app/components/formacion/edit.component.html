@@ -1,5 +1,5 @@
-<div class="container50" *ngIf="eduLab">
-   
+<div class="container" *ngIf="eduLab">
+    <div class="logo-desc"><img src="../../../assets/logo.png" alt="logo" width="100px" routerLink=""></div>
     <div>
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div class="form-group">
@@ -18,9 +18,9 @@
                 <label for="finishDate">Institucion:</label>
                 <input type="number" class="form-control" id="finishDate" name="finishDate" [(ngModel)]="eduLab.finishDate" required>
             </div>
-            <button class="btn btn-primary" >
-               Actualizar formacion academica
-            </button>
+            <div class="actualizar"><button class="btn btn-primary" >
+                Actualizar Datos
+             </button></div>
         </form>
     </div>
 

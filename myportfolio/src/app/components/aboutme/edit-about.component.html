@@ -1,12 +1,12 @@
-<div class="about" *ngIf="about">
-   <div class="logo-about"><img src="../../../assets/logo.png" alt="logo" width="100px"></div>
+<div class="container" *ngIf="about">
+   <div class="logo-desc"><img src="../../../assets/logo.png" alt="logo" width="100px" routerLink=""></div>
     <div class="about-form">
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div class="form-group">
                 <label for="descripcion">Sobre mi:</label>
                 <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="about.descripcion" required>
             </div>
-            <div class="about-send"><button class="btn btn-primary" >
+            <div class="actualizar"><button class="btn btn-primary" >
                 Actualizar Datos
              </button></div>
             

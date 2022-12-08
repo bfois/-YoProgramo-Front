@@ -12,12 +12,13 @@ export class NewProyecComponent implements OnInit {
   nombre: string = "";
   descripcion:string = "";
   img:string = "";
+  url:string = "";
   constructor(private sProyec:ProyectosService, private router:Router) { }
 
   ngOnInit(): void {
   }
 onCreate():void{
-  const proyec = new Proyectos(this.nombre,this.descripcion, this.img)
+  const proyec = new Proyectos(this.nombre,this.descripcion, this.img,this.url)
   this.sProyec.save(proyec).subscribe(data => {alert("Proyecto añadido")
   this.router.navigate([""]);
 },err =>{

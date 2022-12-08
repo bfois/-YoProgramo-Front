@@ -1,5 +1,5 @@
-<div class="container50" *ngIf="expLab">
-   
+<div class="container" *ngIf="expLab">
+    <div class="logo-desc"><img src="../../../assets/logo.png" alt="logo" width="100px" routerLink=""></div>
     <div>
         <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div class="form-group">
@@ -10,9 +10,9 @@
                 <label for="descripcionE">Descripcion:</label>
                 <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
             </div>
-            <button class="btn btn-primary" >
-               Actualizar experiencia
-            </button>
+            <div class="actualizar"><button class="btn btn-primary" >
+                Actualizar Experiencia
+             </button></div>
         </form>
     </div>
 

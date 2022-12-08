@@ -1,5 +1,5 @@
-<div class="container50">
-   
+<div class="container">
+    <div class="logo-desc"><img src="../../../assets/logo.png" alt="logo" width="100px" routerLink=""></div>
     <div>
         <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
             <div class="form-group">
@@ -14,9 +14,13 @@
                 <label for="img">Imagen:</label>
                 <input type="text" class="form-control" id="img" name="img" [(ngModel)]="img" required>
             </div>
-            <button class="btn btn-primary" >
+            <div class="form-group">
+                <label for="url">Link:</label>
+                <input type="text" class="form-control" id="url" name="url" [(ngModel)]="url" required>
+            </div>
+            <div class="actualizar"><button class="btn btn-primary" >
                 Agregar Proyecto
-            </button>
+             </button></div>
         </form>
     </div>
 
