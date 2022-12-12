@@ -7,7 +7,7 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-  urlProyec = "http://localhost:8080/proyectos";
+  urlProyec = "https://portfoliobef-bfois.koyeb.app/proyectos";
   constructor(private httpClient : HttpClient) {
    }
    public lista(): Observable<Proyectos[]>{

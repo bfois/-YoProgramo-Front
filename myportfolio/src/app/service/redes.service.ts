@@ -7,7 +7,7 @@ import { Redes } from '../model/redes';
   providedIn: 'root'
 })
 export class RedesService {
-  urlRedes = 'http://localhost:8080/redes';
+  urlRedes = 'https://portfoliobef-bfois.koyeb.app/redes';
   constructor(private httpClient:HttpClient) { }
   public lista(): Observable<Redes[]>{
     return this.httpClient.get<Redes[]>(this.urlRedes + "/lista");

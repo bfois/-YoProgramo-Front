@@ -7,7 +7,7 @@ import { HyS } from '../model/hy-s';
   providedIn: 'root'
 })
 export class SkillService {
-  urlhys = 'http://localhost:8080/skills';
+  urlhys = 'https://portfoliobef-bfois.koyeb.app/skills';
   constructor(private httpClient:HttpClient) { }
   public lista(): Observable<HyS[]>{
     return this.httpClient.get<HyS[]>(this.urlhys + "/lista");

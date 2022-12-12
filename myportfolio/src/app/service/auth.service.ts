@@ -14,7 +14,7 @@ import { JwtDto } from '../model/jwt-dto';
 
 
 export class AuthService {
-  urlAuth="http://localhost:8080/api/auth/";
+  urlAuth="https://portfoliobef-bfois.koyeb.app/api/auth/";
   
   constructor(private http:HttpClient) { }
 
