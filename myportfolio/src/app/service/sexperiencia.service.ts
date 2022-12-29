@@ -8,8 +8,9 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SexperienciaService {
   expUrl = "https://portfoliobef-bfois.koyeb.app/explab"
+  // expUrl = "http://localhost:8080/explab"
   constructor(private httpClient: HttpClient) { }
-  
+
   public lista(): Observable<Experiencia[]>{
     return this.httpClient.get<Experiencia[]>(this.expUrl + "/lista");
   }
@@ -18,11 +19,11 @@ export class SexperienciaService {
     return this.httpClient.get<Experiencia>(this.expUrl + `/detail/${id}`);
   }
 
-  public save(experiencia: Experiencia):Observable<any>{
+  public save(experiencia: Experiencia):Observable<Experiencia>{
     return this.httpClient.post<any>(this.expUrl + '/create',experiencia);
   }
 
-  public update(id:number, experiencia:Experiencia): Observable<any>{
+  public update(id:number, experiencia:Experiencia): Observable<Experiencia>{
     return this.httpClient.put<any>(this.expUrl + `/update/${id}`,experiencia);
   }
 

@@ -9,7 +9,7 @@ import { SeducacionService } from 'src/app/service/seducacion.service';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
-  eduLab : Educacion = null;
+  eduLab : Educacion;
   constructor(private sEducacion: SeducacionService,private actRouter:ActivatedRoute,private router: Router) { }
 
   ngOnInit(): void {
@@ -27,7 +27,7 @@ export class EditComponent implements OnInit {
     const id= this.actRouter.snapshot.params["id"];
     this.sEducacion.update(id,this.eduLab).subscribe(data => {
       this.router.navigate([""]);
-  
+
     },err=>{
       alert("Error al actualizar")
       this.router.navigate([""]);

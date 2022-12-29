@@ -7,7 +7,8 @@ import { HyS } from '../model/hy-s';
   providedIn: 'root'
 })
 export class SkillService {
-  urlhys = 'https://portfoliobef-bfois.koyeb.app/skills';
+    urlhys = 'https://portfoliobef-bfois.koyeb.app/skills';
+  // urlhys = 'http://localhost:8080/skills';
   constructor(private httpClient:HttpClient) { }
   public lista(): Observable<HyS[]>{
     return this.httpClient.get<HyS[]>(this.urlhys + "/lista");
@@ -17,11 +18,11 @@ export class SkillService {
     return this.httpClient.get<HyS>(this.urlhys + `/detail/${id}`);
   }
 
-  public save(hys: HyS):Observable<any>{
+  public save(hys: HyS):Observable<HyS>{
     return this.httpClient.post<any>(this.urlhys + '/create',hys);
   }
 
-  public update(id:number, hys:HyS): Observable<any>{
+  public update(id:number, hys:HyS): Observable<HyS>{
     return this.httpClient.put<any>(this.urlhys + `/update/${id}`,hys);
   }
 

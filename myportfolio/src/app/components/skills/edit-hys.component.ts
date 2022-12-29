@@ -9,7 +9,7 @@ import { SkillService } from 'src/app/service/skill.service';
   styleUrls: ['./edit-hys.component.css']
 })
 export class EditHysComponent implements OnInit {
-  hys: HyS = null;
+  hys: HyS;
   constructor(private sHys: SkillService, private actRouter:ActivatedRoute,private router: Router) { }
 
   ngOnInit(): void {

@@ -9,7 +9,7 @@ import { SAboutMeService } from 'src/app/service/sabout-me.service';
   styleUrls: ['./edit-about.component.css']
 })
 export class EditAboutComponent implements OnInit {
-  about: AboutMe = null;
+  about: AboutMe;
   constructor(private aboutMeService: SAboutMeService, private actRouter:ActivatedRoute,private router: Router) { }
   ngOnInit(): void {
     const id= this.actRouter.snapshot.params["id"];

@@ -1,19 +1,21 @@
-
+<nav  class="navbar navbar-dark ">
         <div id="navbar" class="container-fluid">
           <div id="logo" class="col">
             <a href="/"><img src="../../../assets/logo.png" height="30px"></a>
           </div>
-          
+
             <div class="redesSociales">
             <tr *ngFor="let Redes of redes">
               <td>
-                <a href="{{Redes.url}}"  target="_blank"><img class="social" src="{{Redes.icono}}" height="30px" ></a>
+                <a [href]="Redes.url"  target="_blank"><img class="social" [src]="Redes.icono" height="30px" ></a>
               </td>
             </tr>
-          </div>
-          
+
             <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
             <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
-       
           </div>
-         
+
+
+
+          </div>
+</nav>

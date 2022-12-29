@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Confirm } from 'src/app/model/Confirm';
 import { Educacion } from 'src/app/model/educacion';
 import { SeducacionService } from 'src/app/service/seducacion.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -24,6 +25,7 @@ edu : Educacion[] = [];
   cargarEducation():void{
     this.sEducacion.lista().subscribe(data =>{this.edu = data})
     }
+    @Confirm("¿Estas seguro que quieres eliminar esta Formacion?")
     delete(id?:number){
       if(id !=undefined){
         this.sEducacion.delete(id).subscribe(data =>{

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Confirm } from 'src/app/model/Confirm';
 import { Proyectos } from 'src/app/model/proyectos';
 import { ProyectosService } from 'src/app/service/proyectos.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -25,6 +26,7 @@ export class ProyectosComponent implements OnInit {
   cargarProyec():void{
     this.sProyectos.lista().subscribe(data =>{this.proyec = data;})
 }
+@Confirm("¿Estas seguro que quieres eliminar este Proyecto?")
 delete(id?:number){
   if(id !=undefined){
     this.sProyectos.delete(id).subscribe(data =>{
@@ -32,5 +34,5 @@ delete(id?:number){
     },err=>{alert("No se pudo eliminar la experiencia");})
   }
 }
-  
+
 }

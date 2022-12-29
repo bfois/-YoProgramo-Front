@@ -10,7 +10,7 @@ import { SexperienciaService } from 'src/app/service/sexperiencia.service';
   styleUrls: ['./editexp.component.css']
 })
 export class EditexpComponent implements OnInit {
-expLab: Experiencia = null;
+expLab: Experiencia;
   constructor(private sExperiencia: SexperienciaService, private actRouter:ActivatedRoute,private router: Router) { }
 
   ngOnInit(): void {

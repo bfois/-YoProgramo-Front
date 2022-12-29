@@ -7,7 +7,8 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class SeducacionService {
-  eduUrl = "https://portfoliobef-bfois.koyeb.app/educacion"
+   eduUrl = "https://portfoliobef-bfois.koyeb.app/educacion"
+  // eduUrl = "http://localhost:8080/educacion"
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Educacion[]>{
@@ -18,11 +19,11 @@ export class SeducacionService {
     return this.httpClient.get<Educacion>(this.eduUrl + `/detail/${id}`);
   }
 
-  public save(educacion: Educacion):Observable<any>{
+  public save(educacion: Educacion):Observable<Educacion>{
     return this.httpClient.post<any>(this.eduUrl + '/create',educacion);
   }
 
-  public update(id:number, educacion:Educacion): Observable<any>{
+  public update(id:number, educacion:Educacion): Observable<Educacion>{
     return this.httpClient.put<any>(this.eduUrl + `/update/${id}`,educacion);
   }
 

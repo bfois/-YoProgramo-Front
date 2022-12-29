@@ -13,15 +13,14 @@
 }
 .social{
  margin-right: 2px;
-    
+
 }
 .social:hover{
     cursor: pointer;
 }
 #navbar{
-    display: flex;
+    margin-top: 20px;
     position: fixed;
-    width: 100%;
     background: #20202380;
     z-index: 2;
     -webkit-backdrop-filter: blur(10px);

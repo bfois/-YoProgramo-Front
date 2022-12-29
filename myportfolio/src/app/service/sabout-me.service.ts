@@ -7,7 +7,8 @@ import { AboutMe } from '../model/about-me.model';
   providedIn: 'root'
 })
 export class SAboutMeService {
-  urlAbout= 'https://portfoliobef-bfois.koyeb.app/aboutMe/';
+   urlAbout= 'https://portfoliobef-bfois.koyeb.app/aboutMe/';
+  // urlAbout= 'http://localhost:8080/aboutMe/';
   constructor(private http:HttpClient) { }
 
   public getPersona():Observable<AboutMe>{
@@ -16,7 +17,7 @@ export class SAboutMeService {
   public detail(id: number): Observable<AboutMe>{
     return this.http.get<AboutMe>(this.urlAbout + `detail/${id}`);
   }
-  public update(id:number, aboutMe:AboutMe): Observable<any>{
+  public update(id:number, aboutMe:AboutMe): Observable<AboutMe>{
     return this.http.put<any>(this.urlAbout + `update/${id}`,aboutMe);
   }
 }

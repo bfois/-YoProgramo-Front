@@ -14,17 +14,18 @@ import { JwtDto } from '../model/jwt-dto';
 
 
 export class AuthService {
-  urlAuth="https://portfoliobef-bfois.koyeb.app/api/auth/";
-  
+   urlAuth="https://portfoliobef-bfois.koyeb.app/api/auth/";
+  // urlAuth="http://localhost:8080/api/auth/";
+
   constructor(private http:HttpClient) { }
 
     public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
       return this.http.post<any>(this.urlAuth + 'register', nuevoUsuario);
     }
-   
+
     public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
       return this.http.post<JwtDto>(this.urlAuth + 'login', loginUsuario)
     }
-  
+
   }
 

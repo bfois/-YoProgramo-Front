@@ -7,7 +7,8 @@ import { Redes } from '../model/redes';
   providedIn: 'root'
 })
 export class RedesService {
-  urlRedes = 'https://portfoliobef-bfois.koyeb.app/redes';
+   urlRedes = 'https://portfoliobef-bfois.koyeb.app/redes';
+  // urlRedes = 'http://localhost:8080/redes';
   constructor(private httpClient:HttpClient) { }
   public lista(): Observable<Redes[]>{
     return this.httpClient.get<Redes[]>(this.urlRedes + "/lista");
@@ -17,11 +18,11 @@ export class RedesService {
     return this.httpClient.get<Redes>(this.urlRedes + `/detail/${id}`);
   }
 
-  public save(redes: Redes):Observable<any>{
+  public save(redes: Redes):Observable<Redes>{
     return this.httpClient.post<any>(this.urlRedes + '/create',redes);
   }
 
-  public update(id:number, redes:Redes): Observable<any>{
+  public update(id:number, redes:Redes): Observable<Redes>{
     return this.httpClient.put<any>(this.urlRedes + `/update/${id}`,redes);
   }
 

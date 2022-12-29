@@ -9,11 +9,7 @@
 .proyec-bottom{
     display: flex;
     width: 0px;
-   
-}
-.col{
-    text-align: center;
-    width: 50%;
+
 }
 img{
     border-radius: 3px;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Confirm } from 'src/app/model/Confirm';
 import { HyS } from 'src/app/model/hy-s';
 import { SkillService } from 'src/app/service/skill.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -25,6 +26,7 @@ export class SkillsComponent implements OnInit {
   cargarSkill():void{
 this.sHys.lista().subscribe(data =>{this.hys = data})
 }
+@Confirm("¿Estas seguro que quieres eliminar esta Habilidad?")
 delete(id?:number){
   if(id !=undefined){
     this.sHys.delete(id).subscribe(data =>{

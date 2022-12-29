@@ -9,7 +9,7 @@ import { ProyectosService } from 'src/app/service/proyectos.service';
   styleUrls: ['./edit-proyec.component.css']
 })
 export class EditProyecComponent implements OnInit {
-  proyec: Proyectos = null;
+  proyec: Proyectos;
   constructor(private sProyectos: ProyectosService, private actRouter:ActivatedRoute,private router: Router) { }
 
   ngOnInit(): void {

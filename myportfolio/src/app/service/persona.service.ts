@@ -9,7 +9,8 @@ import { Persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-URL = 'https://portfoliobef-bfois.koyeb.app/personas/';
+ URL = 'https://portfoliobef-bfois.koyeb.app/personas/';
+// URL="http://localhost:8080/personas/";
   constructor(private http:HttpClient) { }
 
   public getPersona():Observable<Persona>{
@@ -18,7 +19,7 @@ URL = 'https://portfoliobef-bfois.koyeb.app/personas/';
   public detail(id: number): Observable<Persona>{
     return this.http.get<Persona>(this.URL + `detail/${id}`);
   }
-  public update(id:number, persona:Persona): Observable<any>{
+  public update(id:number, persona:Persona): Observable<Persona>{
     return this.http.put<any>(this.URL + `update/${id}`,persona);
   }
 }

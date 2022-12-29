@@ -9,7 +9,7 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./edit-desc.component.css']
 })
 export class EditDescComponent implements OnInit {
-  info: Persona = null;
+  info: Persona;
   constructor(private sPersona: PersonaService, private actRouter:ActivatedRoute,private router: Router) { }
   ngOnInit(): void {
     const id= this.actRouter.snapshot.params["id"];

@@ -7,7 +7,8 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-  urlProyec = "https://portfoliobef-bfois.koyeb.app/proyectos";
+   urlProyec = "https://portfoliobef-bfois.koyeb.app/proyectos";
+  // urlProyec="http://localhost:8080/proyectos";
   constructor(private httpClient : HttpClient) {
    }
    public lista(): Observable<Proyectos[]>{
@@ -18,11 +19,11 @@ export class ProyectosService {
     return this.httpClient.get<Proyectos>(this.urlProyec + `/detail/${id}`);
   }
 
-  public save(proyectos: Proyectos):Observable<any>{
+  public save(proyectos: Proyectos):Observable<Proyectos>{
     return this.httpClient.post<any>(this.urlProyec + '/create',proyectos);
   }
 
-  public update(id:number, proyectos:Proyectos): Observable<any>{
+  public update(id:number, proyectos:Proyectos): Observable<Proyectos>{
     return this.httpClient.put<any>(this.urlProyec + `/update/${id}`,proyectos);
   }
 
