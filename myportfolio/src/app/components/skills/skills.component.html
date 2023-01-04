@@ -1,6 +1,8 @@
 <div class="container">
+
+
     <div class="container-fluid">
-        <h4>Skill:</h4>
+      <h4>Skill:</h4>
     <button type="button" class="btn btn-dark" routerLink="/newhys" *ngIf="isLogged">Nueva Skill</button>
 
     <div class="row">
@@ -18,7 +20,7 @@
     [titleColor]="'#FFFFFF'"
     [showSubtitle]="false"
     [showUnits]="false"
-    ></circle-progress> 
+    ></circle-progress>
     <div *ngIf="isLogged" class="button-circle"><button class="btn btn-dark" routerLink="/edithys/{{HyS.id}}">
         <i class="bi bi-pen"></i>
     </button>

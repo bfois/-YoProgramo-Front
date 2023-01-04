@@ -1,11 +1,23 @@
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    color: white;
-    box-sizing: border-box;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  color: white;
+  box-sizing: border-box;
 }
+@media (max-width: 600px){
+  .container{
+    width: 100%;
+  }}
+  @media (min-width: 1280px){
+    .container-fluid{
+      width: 80%;
+    }
+    h4{
+      margin-left: -80px;
+    }}
 .circle{
     display: flex;
     justify-content: center;

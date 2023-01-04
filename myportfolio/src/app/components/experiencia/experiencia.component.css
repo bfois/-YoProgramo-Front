@@ -1,11 +1,15 @@
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    color: white;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  color: white;
+  box-sizing: border-box;
 }
+@media (max-width: 600px){
+  .container{
+    width: 100%;
+  }}
 .exp-button{
     display: flex;
     width: 0px;

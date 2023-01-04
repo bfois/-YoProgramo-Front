@@ -5,6 +5,11 @@
     margin-top: -50px;
     z-index: 2;
 }
+@media (max-width: 600px){
+  #bienvenida-div{
+    width: 95%;
+    margin: auto;
+  }}
 p{
   font-family:'Courier New', Courier, monospace;
   color:white;

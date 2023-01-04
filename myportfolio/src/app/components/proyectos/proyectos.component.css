@@ -1,10 +1,23 @@
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    color: white;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  color: white;
+  box-sizing: border-box;
+  text-align: center;
+}
+h3{
+  text-align: start;
+}
+@media (max-width: 600px){
+  .container{
+    width: 100%;
+  }
+p{
+  text-align: center;
+}
+
 }
 .proyec-bottom{
     display: flex;
@@ -27,3 +40,4 @@ p{
 h5{
     font-size: 14px;
 }
+
