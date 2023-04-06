@@ -1,11 +1,11 @@
 <div class="container">
-
-
-    <div class="container-fluid">
+  <div class="tittle">
       <h4>Skill:</h4>
-    <button type="button" class="btn btn-dark" routerLink="/newhys" *ngIf="isLogged">Nueva Skill</button>
+    </div>
 
-    <div class="row">
+    <button type="button" class="newSkill btn btn-dark" routerLink="/newhys" *ngIf="isLogged">Nueva Skill</button>
+
+    <div class="stats">
         <div *ngFor="let HyS of hys" class="col circle">  <circle-progress
             [title]="(HyS.nombreHyS)"
     [percent]="(HyS.porcentajeHyS)"
@@ -15,7 +15,7 @@
     [outerStrokeColor]="'#FFFFFF'"
     [innerStrokeColor]="'#FFC709'"
     [animation]="true"
-    [animationDuration]="1000"
+    [animationDuration]="2000"
     [titleFontSize]="'12'"
     [titleColor]="'#FFFFFF'"
     [showSubtitle]="false"
@@ -34,5 +34,3 @@
 
     </div>
     </div>
-
-</div>

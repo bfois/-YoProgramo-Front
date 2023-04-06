@@ -1,12 +1,22 @@
 .container{
   display: flex;
-
+  margin-bottom: 10px;
   justify-content: center;
   align-items: center;
   width: 50%;
   color: white;
-  box-sizing: border-box;
+  flex-direction: column;
 }
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tittle{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
 @media (max-width: 600px){
   .container{
     width: 100%;
@@ -15,16 +25,7 @@
     .container-fluid{
       width: 80%;
     }
-    h4{
-      margin-left: -80px;
-    }}
-.circle{
-    display: flex;
-    justify-content: center;
-}
-.col{
-    width: 50%
-}
+
 .button-circle{
     width: 20%;
 }
@@ -38,3 +39,7 @@
     .container{
         width: 100%;
     }}
+  }
+.newSkill{
+  margin-bottom: 10px;
+}
