@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ObjectComponent } from './components/object/object.component';
@@ -29,19 +28,11 @@ import { EditProyecComponent } from './components/proyectos/edit-proyec.componen
 import { NewProyecComponent } from './components/proyectos/new-proyec.component';
 import { EditHysComponent } from './components/skills/edit-hys.component';
 import { NewHysComponent } from './components/skills/new-hys.component';
-
-
-
-
-
-
-
-
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     HomeComponent,
     LoginComponent,
     ObjectComponent,
@@ -52,7 +43,6 @@ import { NewHysComponent } from './components/skills/new-hys.component';
     SkillsComponent,
     ExperienciaComponent,
     ProyectosComponent,
-    FooterComponent,
     NewExpComponent,
     EditexpComponent,
     EditComponent,
@@ -63,9 +53,6 @@ import { NewHysComponent } from './components/skills/new-hys.component';
     NewProyecComponent,
     EditHysComponent,
     NewHysComponent,
-
-
-  
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -75,6 +62,8 @@ import { NewHysComponent } from './components/skills/new-hys.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    HeaderComponent,
+    FooterComponent
   ],
   providers: [{provide: HTTP_INTERCEPTORS,useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]

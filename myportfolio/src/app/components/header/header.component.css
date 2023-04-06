@@ -1,25 +1,17 @@
 #logo{
    margin: 2px;
 }
-#boton{
-    margin: 2px;
-    color:white;
-}
-#boton:hover{
-    background-color:rgb(83, 83, 241);
-}
-#social{
-    text-align: end;
-}
 .social{
  margin-right: 2px;
-
 }
 .social:hover{
     cursor: pointer;
 }
 #navbar{
-    margin-top: 20px;
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     background: #20202380;
     z-index: 2;
@@ -30,4 +22,17 @@
     display: flex;
     margin-right: 5px;
     margin-top: 3px;
+}
+@media (max-width: 600px) {
+  #logo{
+    display: flex;
+  }
+tr{
+  display: none;
+}
+.loginButtons{
+  font-size: 12px;
+  margin-left: -80%;
+}
+
 }
