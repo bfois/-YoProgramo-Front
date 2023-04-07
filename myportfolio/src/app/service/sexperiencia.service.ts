@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SexperienciaService {
-   expUrl = "https://portfoliobef-bfois.koyeb.app/explab"
+   expUrl = "https://vague-kissie-bfois.koyeb.app/explab"
   //  expUrl = "http://localhost:8080/explab"
   constructor(private httpClient: HttpClient) { }
 

@@ -7,7 +7,7 @@ import { AboutMe } from '../model/about-me.model';
   providedIn: 'root'
 })
 export class SAboutMeService {
-    urlAbout= 'https://portfoliobef-bfois.koyeb.app/aboutMe/';
+    urlAbout= 'https://vague-kissie-bfois.koyeb.app/aboutMe/';
   //  urlAbout= 'http://localhost:8080/aboutMe/';
   constructor(private http:HttpClient) { }
 

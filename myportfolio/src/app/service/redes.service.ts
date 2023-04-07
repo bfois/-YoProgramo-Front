@@ -7,7 +7,7 @@ import { Redes } from '../model/redes';
   providedIn: 'root'
 })
 export class RedesService {
-    urlRedes = 'https://portfoliobef-bfois.koyeb.app/redes';
+    urlRedes = 'https://vague-kissie-bfois.koyeb.app/redes';
   //  urlRedes = 'http://localhost:8080/redes';
   constructor(private httpClient:HttpClient) { }
   public lista(): Observable<Redes[]>{

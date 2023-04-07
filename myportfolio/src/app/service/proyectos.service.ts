@@ -7,7 +7,7 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-    urlProyec = "https://portfoliobef-bfois.koyeb.app/proyectos";
+    urlProyec = "https://vague-kissie-bfois.koyeb.app/proyectos";
   //  urlProyec="http://localhost:8080/proyectos";
   constructor(private httpClient : HttpClient) {
    }
