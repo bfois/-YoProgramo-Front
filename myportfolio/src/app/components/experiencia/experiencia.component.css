@@ -5,6 +5,11 @@
   width: 50%;
   color: white;
   box-sizing: border-box;
+  flex-direction: column;
+}
+.title{
+  font-size: 18px;
+  text-align: center;
 }
 @media (max-width: 600px){
   .container{

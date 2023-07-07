@@ -1,9 +1,9 @@
-<div class="container">
-    <div> 
-        <h4>Sobre mi:</h4>
+<div class="container" [@animation]>
+    <div>
+        <span class="title">Sobre mi:</span>
         <div class="about">
         <p>{{aboutMe.descripcion}}</p></div>
-   
+
     <div *ngIf="isLogged">
         <button class="btn btn-dark" routerLink="/edit-about/{{aboutMe.id}}">
             <i class="bi bi-pen"></i>

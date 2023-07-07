@@ -3,11 +3,18 @@ import { Confirm } from 'src/app/model/Confirm';
 import { Educacion } from 'src/app/model/educacion';
 import { SeducacionService } from 'src/app/service/seducacion.service';
 import { TokenService } from 'src/app/service/token.service';
+import { trigger, style, animate, transition } from '@angular/animations';
+const efectStart = transition('void => *', [
+  style({ opacity: 0, transform: 'translateY(100%)' }),
+  animate('1.5s ease', style({ opacity: 1, transform: 'translateY(0)' })),
+]);
 
+const animation = trigger('animation', [efectStart]);
 @Component({
   selector: 'app-formacion',
   templateUrl: './formacion.component.html',
-  styleUrls: ['./formacion.component.css']
+  styleUrls: ['./formacion.component.css'],
+  animations:[animation]
 })
 export class FormacionComponent implements OnInit {
 edu : Educacion[] = [];

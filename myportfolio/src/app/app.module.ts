@@ -10,7 +10,6 @@ import { BienvenidaComponent } from './components/bienvenida/bienvenida.componen
 import { DescripcionComponent } from './components/descripcion/descripcion.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { FormacionComponent } from './components/formacion/formacion.component';
-import { SkillsComponent } from './components/skills/skills.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
@@ -26,8 +25,7 @@ import { EditDescComponent } from './components/descripcion/edit-desc.component'
 import { EditAboutComponent } from './components/aboutme/edit-about.component';
 import { EditProyecComponent } from './components/proyectos/edit-proyec.component';
 import { NewProyecComponent } from './components/proyectos/new-proyec.component';
-import { EditHysComponent } from './components/skills/edit-hys.component';
-import { NewHysComponent } from './components/skills/new-hys.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
@@ -40,7 +38,6 @@ import { HeaderComponent } from './components/header/header.component';
     DescripcionComponent,
     AboutmeComponent,
     FormacionComponent,
-    SkillsComponent,
     ExperienciaComponent,
     ProyectosComponent,
     NewExpComponent,
@@ -51,12 +48,12 @@ import { HeaderComponent } from './components/header/header.component';
     EditAboutComponent,
     EditProyecComponent,
     NewProyecComponent,
-    EditHysComponent,
-    NewHysComponent,
+
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,

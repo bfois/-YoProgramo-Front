@@ -14,8 +14,8 @@ import { JwtDto } from '../model/jwt-dto';
 
 
 export class AuthService {
-    urlAuth="https://vague-kissie-bfois.koyeb.app/api/auth/";
-  //  urlAuth="http://localhost:8080/api/auth/";
+    //urlAuth="https://vague-kissie-bfois.koyeb.app/api/auth/";
+    urlAuth="http://localhost:8080/api/auth/";
 
   constructor(private http:HttpClient) { }
 

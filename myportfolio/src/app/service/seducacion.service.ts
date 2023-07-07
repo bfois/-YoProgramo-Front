@@ -7,8 +7,8 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class SeducacionService {
-    eduUrl = "https://vague-kissie-bfois.koyeb.app/educacion"
-  //  eduUrl = "http://localhost:8080/educacion"
+    //eduUrl = "https://vague-kissie-bfois.koyeb.app/educacion"
+    eduUrl = "http://localhost:8080/educacion"
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Educacion[]>{

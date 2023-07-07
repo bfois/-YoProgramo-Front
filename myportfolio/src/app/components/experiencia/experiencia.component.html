@@ -1,6 +1,8 @@
-<div class="container">
-    <div class="container-fluid">
-    <h4>Experiencia:</h4>
+<div class="container" [@animation]>
+  <div class="exp-container">
+    <span class="title">Experiencia:</span>
+
+
         <button type="button" class="btn btn-dark" routerLink="/newexp" *ngIf="isLogged">Nueva Experiencia</button>
 
         <div class="row" *ngFor="let Experiencia of expe">
@@ -21,7 +23,7 @@
                 </div>
             </div>
         </div>
-   
-     
+
+
 </div>
 </div>
