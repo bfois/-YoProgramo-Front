@@ -5,12 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { ObjectComponent } from './components/object/object.component';
-import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
 import { DescripcionComponent } from './components/descripcion/descripcion.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { FormacionComponent } from './components/formacion/formacion.component';
-import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -33,8 +30,6 @@ import { HeaderComponent } from './components/header/header.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    ObjectComponent,
-    BienvenidaComponent,
     DescripcionComponent,
     AboutmeComponent,
     FormacionComponent,
@@ -48,18 +43,16 @@ import { HeaderComponent } from './components/header/header.component';
     EditAboutComponent,
     EditProyecComponent,
     NewProyecComponent,
-
+    HeaderComponent
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    HeaderComponent,
     FooterComponent
   ],
   providers: [{provide: HTTP_INTERCEPTORS,useClass: InterceptorService, multi:true}],

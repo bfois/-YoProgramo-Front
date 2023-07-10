@@ -9,10 +9,10 @@
 }
 #navbar{
   width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     background: #20202380;
     z-index: 2;
     -webkit-backdrop-filter: blur(10px);
@@ -32,7 +32,7 @@ tr{
 }
 .loginButtons{
   font-size: 12px;
-  margin-left: -80%;
+
 }
 
 }
