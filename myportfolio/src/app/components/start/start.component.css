@@ -26,7 +26,7 @@
 }
 .container-boton{
   position: absolute;
-  animation: parpadeo 2.5s ease infinite;
+  animation: parpadeo 3s ease infinite;
   top: 80%;
 }
 @keyframes parpadeo {
@@ -34,7 +34,7 @@
     opacity: 1;
   }
   50% {
-    opacity: 0;
+    opacity: 0.5;
   }
   100% {
     opacity: 1;

@@ -5,7 +5,7 @@ import { TokenService } from 'src/app/service/token.service';
 import { trigger,style, animate, transition } from '@angular/animations';
 
 const efectStart = transition('void => *', [
-  style({ opacity: 0, transform: 'translateX(100%)' }),
+  style({ opacity: 0, transform: 'translateX(30%)' }),
   animate('1.5s ease', style({ opacity: 1, transform: 'translateX(0)' })),
 ]);
 
