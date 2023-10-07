@@ -20,6 +20,7 @@ import { EditDescComponent } from './components/descripcion/edit-desc.component'
 import { EditAboutComponent } from './components/aboutme/edit-about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProyectoComponent } from './components/proyecto/proyecto.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LoginComponent } from './components/login/login.component';
     NewComponent,
     EditDescComponent,
     EditAboutComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProyectoComponent
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [

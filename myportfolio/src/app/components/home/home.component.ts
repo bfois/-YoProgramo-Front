@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class HomeComponent implements OnInit {
-
+  mostrarProyecto = false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  proyectosView(){
+    this.mostrarProyecto = true;
+  }
+  homeView(){
+    this.mostrarProyecto = false;
+  }
 }

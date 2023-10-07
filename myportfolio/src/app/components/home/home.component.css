@@ -5,3 +5,9 @@
     transform: translate(-50%, -50%);
     width: 50%;
 }
+.sections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
