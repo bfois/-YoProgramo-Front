@@ -1,9 +1,13 @@
 .proyect{
     width: 100%;
     height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container-proyect{
     width: 80%;
     height: 70vh;
     background-color: white;
+    border-radius: 10px;
 }
