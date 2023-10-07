@@ -1,17 +1,17 @@
 <app-header></app-header>
+<div class="sections">
+    <button (click)="homeView()">Sobre Mi</button>
+    <button (click)="proyectosView()">Proyectos</button>
+</div>
 <div *ngIf="!mostrarProyecto">
-    <div class="sections">
-        <button (click)="homeView()">Sobre Mi</button>
-        <button (click)="proyectosView()">Proyectos</button>
-    </div>
-    
     <app-bienvenida></app-bienvenida>
     <app-descripcion></app-descripcion>
     <app-aboutme></app-aboutme>
     <app-formacion></app-formacion>
     <app-experiencia></app-experiencia>
+    <app-footer class="footer"></app-footer>
   </div>
   
   <app-proyecto *ngIf="mostrarProyecto"></app-proyecto>
+    <app-footer></app-footer>
 
-<app-footer class="footer"></app-footer>
