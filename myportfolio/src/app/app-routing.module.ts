@@ -10,13 +10,11 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { EditProyecComponent } from './components/proyectos/edit-proyec.component';
 import { NewProyecComponent } from './components/proyectos/new-proyec.component';
-import { StartComponent } from './components/start/start.component';
 
 
 
 const routes: Routes = [
-{path:'',component:StartComponent},
-{path:'home',component:HomeComponent},
+{path:'',component:HomeComponent},
 {path:'login',component:LoginComponent},
 {path:"newexp",component:NewExpComponent},
 {path:"editexp/:id",component:EditexpComponent},

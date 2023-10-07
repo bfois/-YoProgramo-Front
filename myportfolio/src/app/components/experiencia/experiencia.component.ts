@@ -1,25 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Confirm } from 'src/app/model/Confirm';
 import { Experiencia } from 'src/app/model/experiencia';
-
 import { SexperienciaService } from 'src/app/service/sexperiencia.service';
 import { TokenService } from 'src/app/service/token.service';
-import { trigger, style, animate, transition } from '@angular/animations';
-
-const efectStart = transition('void => *', [
-  style({ opacity: 0, transform: 'translateY(100%)' }),
-  animate('1.5s ease', style({ opacity: 1, transform: 'translateY(0)' })),
-]);
-
-const animation = trigger('animation', [efectStart]);
-
-
 
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
-  styleUrls: ['./experiencia.component.css'],
-  animations:[animation]
+  styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
   expe : Experiencia[] = [];

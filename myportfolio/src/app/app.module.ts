@@ -9,7 +9,6 @@ import { DescripcionComponent } from './components/descripcion/descripcion.compo
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { FormacionComponent } from './components/formacion/formacion.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
-import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -20,8 +19,6 @@ import { EditComponent } from './components/formacion/edit.component';
 import { NewComponent } from './components/formacion/new.component';
 import { EditDescComponent } from './components/descripcion/edit-desc.component';
 import { EditAboutComponent } from './components/aboutme/edit-about.component';
-import { EditProyecComponent } from './components/proyectos/edit-proyec.component';
-import { NewProyecComponent } from './components/proyectos/new-proyec.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 
@@ -34,15 +31,12 @@ import { HeaderComponent } from './components/header/header.component';
     AboutmeComponent,
     FormacionComponent,
     ExperienciaComponent,
-    ProyectosComponent,
     NewExpComponent,
     EditexpComponent,
     EditComponent,
     NewComponent,
     EditDescComponent,
     EditAboutComponent,
-    EditProyecComponent,
-    NewProyecComponent,
     HeaderComponent
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
