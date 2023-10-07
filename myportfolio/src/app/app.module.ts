@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
 import { DescripcionComponent } from './components/descripcion/descripcion.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { FormacionComponent } from './components/formacion/formacion.component';
@@ -19,14 +18,13 @@ import { EditComponent } from './components/formacion/edit.component';
 import { NewComponent } from './components/formacion/new.component';
 import { EditDescComponent } from './components/descripcion/edit-desc.component';
 import { EditAboutComponent } from './components/aboutme/edit-about.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
     DescripcionComponent,
     AboutmeComponent,
     FormacionComponent,
@@ -42,12 +40,12 @@ import { HeaderComponent } from './components/header/header.component';
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   providers: [{provide: HTTP_INTERCEPTORS,useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent]
