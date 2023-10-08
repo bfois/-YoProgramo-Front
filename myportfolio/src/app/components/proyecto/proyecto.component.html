@@ -1,4 +1,23 @@
 <section class="proyect" *ngFor="let proyecto of list">
+    
     <div class="container-proyect">
+        <div class="navbar_cmd">
+            <div>
+                <img src="../../../assets/cmd.png" width="30px" alt="sistema_logo">
+                <span class="cmd_span">Simbolo del sistema</span>
+            </div>
+            <div class="close_cmd">X</div>
+        </div>
+        <div class="descripcion_cmd"><span>Microsoft Windows [Versión 2023 😎]
+            (c) Brian Corporation. Todos los derechos reservados.</span></div>
+            <div class="descripcion_proyecto">
+                <span class="descripcion_proyecto_span">Nombre: {{proyecto.nombre}}</span>
+                <span class="descripcion_proyecto_span">Descripción: {{proyecto.descripcion}}</span>
+                <span>C:\Users\braian><span class="type_text">_</span></span>
+            </div>
+            <a [href]="proyecto.url"><img class="img_proyecto" [src]="proyecto.img" [alt]="proyecto.nombre" width="50%"></a>
+        
     </div>
+   
+        
 </section>

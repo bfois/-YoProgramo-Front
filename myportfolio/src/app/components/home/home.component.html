@@ -11,7 +11,9 @@
     <app-experiencia></app-experiencia>
     <app-footer class="footer"></app-footer>
   </div>
-  
-  <app-proyecto *ngIf="mostrarProyecto"></app-proyecto>
+  <div *ngIf="mostrarProyecto">
+    <app-proyecto ></app-proyecto>
     <app-footer></app-footer>
+  </div>
+  
 
